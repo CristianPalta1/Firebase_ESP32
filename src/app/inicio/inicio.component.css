@@ -1,0 +1,458 @@
+.btn.btn-primary {
+  color: #fff;
+  background-color: #202ba7;
+  border-color: #202ba7;
+}
+
+.btn.btn-primary:not(:disabled):not(.disabled):hover {
+  color: #fff;
+  background-color: #202ba7;
+  border-color: #202ba7;
+}
+
+.btn.btn-primary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: #202ba7;
+  border-color: #202ba7;
+}
+
+.btn.btn-primary:not(:disabled):not(.disabled):focus {
+  box-shadow: 0 0 0 0.2rem rgba(125, 205, 64, 0.5);
+}
+
+
+div.terminos{
+  background-color: whitesmoke;
+  position: fixed;
+  height: 180px;
+  width: 233px;
+  font-size: 1em;
+  border: 1px solid black;
+  overflow-y: scroll;
+  padding: 2px 4px;
+  margin: 0px 4px;
+  display: block;
+  border-radius: 2%;
+  
+  
+}
+.hero-image {
+  background-image: url("../../assets/images/Cruz_Belalcazar.jpg");
+  background-color: #cccccc;
+  height: 410px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.hero-iot {
+  background-image: url("../../assets/images/internet-of-things.jpg");
+  background-color: #cccccc;
+  height: 410px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  transform: translate(-1%, -50%);
+  color: black;
+
+}
+
+.hero-iottext {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffd600;
+
+}
+
+.boton-compra{
+  background-color: #202ba7;
+  border-color: #202ba7;
+  height: 50px;
+  width: 180px;
+  color:#ffd600;
+  border-radius: 2%;
+  /* border: #ffd600; */
+  border: 3px
+  /* //padding:20px 20px 15px 20px; */
+
+}
+
+.fondo-inicio{
+  padding: 11px 40px 0px 40px;
+  /* width: 100%;
+  height: auto; */
+
+}
+
+
+.parallax{
+  background-image: url('../../assets/images/cruz-de-belalcazar.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.servicio-inicio{
+  /* padding: 11px 20px 0px 20px; */
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-justify: inter-word;
+  /* margin-right: 40px;
+  margin-left: 2px;  */
+}
+
+
+.servicio-inicio2{
+  /* padding: 11px 20px 0px 20px; */
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-justify: inter-word;
+  background-image: url("../../assets/images/Cruz_Belalcazar.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* margin-right: 40px;
+  margin-left: 2px;  */
+}
+
+.enviochat{
+  padding-right: 20px;
+  padding-left: 1px;
+  padding-top: 260px;
+  padding-bottom: 1px;
+  /* margin: 0px 5px; */
+  /* display: block; */
+  font-size: 0.5em;
+}
+
+.datos-chat{
+  padding: 90px 5px;
+  margin: 0px 5px;
+  display: block;
+  font-size: 0.9em; 
+}
+
+
+.header {
+  background-color: #FF0000;
+  color: blue;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header a {
+  color: blue;
+  text-decoration: none;
+}
+.menu {
+  height: inherit;
+}
+.header ol {
+  display: flex;
+  height: inherit;
+}
+.header ol li {
+  height: inherit;
+}
+.header a {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+}
+
+.header .logo {
+  text-align: center;
+}
+.menu {
+  height: inherit;
+}
+
+.menu {
+  position: fixed;
+  background: rgba(5, 111, 255, .9);
+  z-index: 3;
+  top: 0;
+  left: -100vw;
+  width: 100vw;
+  /* height: 100vh; */
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+}
+.menu.is-active {
+  left: 0;
+}
+
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.derecha{
+  text-align: right;
+}
+
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex: 1;
+    margin: 0 auto;
+    flex-wrap: inherit;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+  }
+
+.submenu2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 90px;
+    background: white;
+    color: black;
+    border-radius: 0%;
+    position: fixed;
+    right:  65px;
+    bottom: 465px;
+    font-size: 1em;
+}
+.submenu3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 90px;
+  background: white;
+  color: black;
+  border-radius: 0%;
+  position: fixed;
+  right:  225px;
+  bottom: 430px;
+  font-size: 1em;
+}
+
+
+.btn-add{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  background: #202ba7;
+  color: #ffd600;
+  border-radius: 50%;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.cuerpo-chat{
+  background-image: url(../../assets/images/logo.jpeg); 
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top ;
+  display: block;
+  width: 240px;
+  height: 350px;
+  padding-left: 60px;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  padding-right: 59px;
+
+  
+}
+
+.cuerpo-chat2{
+  /* background-image: url(../../assets/images/logo.jpeg); */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top ;
+  display: block;
+  width: 240px;
+  height: 295px;
+  background: white;
+  font-size: 1em;
+}
+
+.chatbox2{
+  display: block;
+  width: 250px;
+  height: 370px;
+  background: white;
+  
+  /* opacity: 0.5; */
+  border-color: black;
+  border-radius: 3%;
+  border: 3px;
+  border-style: solid;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  font-size: 1em;
+
+}
+
+.btnchat{
+  display: block;
+  width: 145px;
+  height: 50px;
+  background: #202ba7;
+  color: #ffd600;
+  /* opacity: 0.5; */
+  border-color: black;
+  border-radius: 2%;
+  border: 1px;
+  border-style: solid;
+  /* position:relative; */
+  
+  right: 15px;
+  bottom: 15px;
+  font-size: 1em;
+
+}
+
+.chatbox{
+  display: block;
+  width: 250px;
+  height: 370px;
+  background: white;
+  
+  /* opacity: 0.5; */
+  border-color: black;
+  border-radius: 3%;
+  border: 3px;
+  border-style: solid;
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  font-size: 1em;
+
+}
+
+.footer {
+  color: black;
+  background-color:whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a {
+  color: black;
+}
+
+.contact {
+  background-color: #1a237e;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container2 {
+  /* border: 1px solid red; */
+  max-width: 1000px;
+  /* width: 100%; */
+  flex: 1;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.twitter {
+  background-image: url('../../assets/images/twt.png');
+}
+.social-link.facebook {
+  background-image: url('../../assets/images/fb.png');
+}
+
+
+@media screen and (max-width: 480px) {
+  
+  .container2 {
+    padding: 0 1em;
+  }
+  .contact {
+    height: auto;
+    padding: 1.5em 0;
+    text-align: center;
+    display: block;
+  }
+  .form-email button {
+    margin: 1em auto;
+  }
+  .form-email h3 {
+    margin-top: 0;
+  }
+  .footer {
+    display: block;
+    text-align: center;
+    border: 1px solid transparent;
+  }
+  .social-link {
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+  }
+   
+}

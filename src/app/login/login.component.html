@@ -1,0 +1,197 @@
+<!-- <div class="contacto-page" [@routerTransition]> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
+  
+    <img src="../assets/images/logo.jpeg" height="50" alt="Logo de seguridad del cauca" />
+ 
+  <div class="navbar-header">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/inicio"> <fa-icon [icon]="faHome"> </fa-icon> Inicio</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/quienessomos">
+            <fa-icon [icon]="faHotel"> </fa-icon> ¿Quienes Somos?</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+              >
+              <fa-icon [icon]="faShoppingCart"> </fa-icon> Servicios</a>
+    
+            <div class="dropdown-menu">
+              <a class="dropdown-item" routerLink="/servicios/SVE" routerLinkActive="active">
+                <fa-icon [icon]="faMicrochip"></fa-icon> Seguridad Electronica 24/7</a>
+    
+              <a class="dropdown-item" routerLink="/servicios/segPrivada" routerLinkActive="active"
+                >
+                <fa-icon [icon]="faUserSecret"></fa-icon> Seguridad privada
+                <!-- <fa-icon [icon]="faAngleDoubleRight"> </fa-icon> -->
+              </a>
+              <a class="dropdown-item" routerLink="/servicios/camaras" routerLinkActive="active">
+                <fa-icon [icon]="faVideo"></fa-icon> Camaras de Seguridad
+                <!-- <fa-icon [icon]="faAngleDoubleRight"> </fa-icon> -->
+              </a>
+              <a class="dropdown-item" routerLink="/servicios/estudioSeguridad" routerLinkActive="active">
+                <fa-icon [icon]="faUserEdit"></fa-icon> Estudio de Seguridad</a>
+              <a class="dropdown-item" routerLink="/servicios/Escolta" routerLinkActive="active">
+                <fa-icon [icon]="faUserShield"></fa-icon> Escolta a Personas y Mercancías</a>
+            </div>
+          </li>
+          <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/contactanos">
+            <fa-icon [icon]="faPhoneVolume"> </fa-icon> Contactanos</a></li>
+          <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/cotizacion">
+            <fa-icon [icon]="faHandshake"> </fa-icon> Cotizaciones</a></li>
+          <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/serviciocliente">
+            <fa-icon [icon]="faTools"> </fa-icon> Servicio Al Cliente</a></li>
+          <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/login">
+            <fa-icon [icon]="faUserLock"> </fa-icon> Inicio Sesión</a></li>
+    
+          <!--
+            <li class="nav-item" routerLinkActive="active">
+              <a (click)="logout()" class="nav-item nav-link"  >Logout</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/contacto">Contactanos</a>
+            </li>
+          -->
+        </ul>
+  </div>
+</nav>
+
+<br /><br /><br />
+
+<div class="container login-page">
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+      <!-- <img src="../../assets/images/logo.jpeg" width="150px" /><br /><br /> -->
+      <img src="../../assets/images/logo.png" width="150px" class="user-avatar" />
+
+      <form role="form" #f="ngForm" (submit)="loginEmailUser()">
+        <div class="form-content">
+          <div class="form-group">
+            <input [(ngModel)] = "email"
+              [ngModelOptions]="{ standalone: true }"
+              type="text" 
+              class="form-control input-underline input-lg" 
+              id="email" 
+              placeholder="Correo" />
+          </div>
+
+          <div class="form-group">
+            <input [(ngModel)] = "pass"
+              [ngModelOptions]="{ standalone: true }"
+              type="password" 
+              class="form-control input-underline input-lg" 
+              id="pass" 
+              placeholder="Contraseña" />
+          </div>
+        </div>
+        <!-- routerLink="/layout/dashboard" -->
+        <a (click) = "loginEmailUser()" class="btn rounded-btn" > Iniciar Sesión </a>  
+        <br />
+        <a class="btn rounded-btn" routerLink="/signup">Registrarse</a>
+      </form>
+      <br />
+      <button (click) = "loginFacebook()" type="button" class="btn rounded-btn2 btn-social btn-facebook">
+        <fa-icon [icon]="faFacebook"></fa-icon> Facebook
+      </button>
+      &nbsp;&nbsp;
+      <button (click) = "loginGoogle()" type="button" class="btn rounded-btn2 btn-social btn-google">
+        <fa-icon [icon]="faGoogle"></fa-icon> Google
+      </button>
+    </div>
+  </div>
+</div>
+<br />
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm text-center">
+            <img src="../assets/images/logo.jpeg" height="50" alt="Logo de seguridad del cauca" />
+            <p>Seguridad del cauca trabajando por más de 40 años en su tranquilidad.</p>
+            <small>¡Trabajemos Juntos!</small>
+          </div>
+          <div class="col-sm text-center">
+            <h4><fa-icon [icon]="faShoppingCart"></fa-icon> Nuestros Servicios</h4>
+            <ul class="list-unstyled" style="font-size: 0.8em">
+              <li>
+                <fa-icon [icon]="faMicrochip"></fa-icon> &nbsp;
+                <a routerLink="/servicios/SVE">Seguridad Electronica 24/7</a>
+              </li>
+              <li>
+                <fa-icon [icon]="faUserSecret"></fa-icon>&nbsp;
+                <a routerLink="/servicios/segPrivada">Seguridad Privada</a>
+              </li>
+              <li>
+                <fa-icon [icon]="faVideo"></fa-icon>&nbsp;
+                <a routerLink="/servicios/camaras">Camaras de Seguridad</a>
+              </li>
+              <li>
+                <fa-icon [icon]="faUserEdit"></fa-icon>&nbsp;
+                <a routerLink="/servicios/estudioSeguridad">Estudio de Seguridad</a>
+              </li>
+              <li>
+                <fa-icon [icon]="faUserShield"></fa-icon>&nbsp;
+                <a routerLink="/servicios/Escolta">Escolta a Personas y Mercancías</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm text-center">
+            <h4><fa-icon [icon]="faPhoneVolume"> </fa-icon> Como Contáctarnos</h4>
+            <ul class="list-unstyled" style="font-size: 0.8em">
+              <li>
+                <fa-icon [icon]="faUserFriends"> </fa-icon>&nbsp;
+                <a routerLink="/contactanos">Contáctanos</a></li>
+              <li>
+                <fa-icon [icon]="faTools"> </fa-icon>&nbsp;
+                <a routerLink="/serviciocliente">Servicio Al Cliente</a></li>
+              <li>
+                <fa-icon [icon]="faPhoneSquare"> </fa-icon>&nbsp;
+                
+                (032) 8242415</li>
+              <li>
+                (+57) 320 675 3562</li>
+              <li>
+                  <fa-icon [icon]="faEnvelope"></fa-icon>&nbsp;
+                  <a href="https://gmail.com">gerencia@seguridaddelcauca.com.co</a></li>
+              <li>
+                <fa-icon [icon]="faFacebook"> </fa-icon>&nbsp;
+                <a href="https://facebook.com/SeguridadDelCaucaLtda">Seguridad del Cauca LTDA</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <div class="container mt16 mb8" style="font-size: 0.8em">
+      <div class="pull-left text-muted">Copryright <fa-icon [icon]="faCopyright"> </fa-icon> SEGURIDAD DEL CAUCA Ltda</div>
+      <div class="pull-right text-muted">
+        Diseñado por Ing. <a class="text-muted" href="https://github.com/CristianPalta1">Cristian Daniel Palta C</a>
+      </div>
+    </div>
+  </footer>
+<div class="submenu2" *ngIf="submenu2 === 'visible'">
+  <div style="text-align:center">
+   <p><a routerLink="/servicios" routerLinkActive="active" style= "color: black">Vigilantes de seguridad con arma</a></p>
+   <hr />
+   <p><a routerLink="/servicios" routerLinkActive="active" style= "color: black">Vigilantes de seguridad sin arma</a></p>
+  </div>
+
+</div>
+<div class="submenu3" *ngIf="submenu3 === 'visible'">
+<div style="text-align:center">
+ <p><a routerLink="/servicios" routerLinkActive="active" style= "color: black">Comodato</a></p>
+ <hr />
+ <p><a routerLink="/servicios" routerLinkActive="active" style= "color: black">Compra</a></p>
+</div>
+</div>
+<!-- </div> -->

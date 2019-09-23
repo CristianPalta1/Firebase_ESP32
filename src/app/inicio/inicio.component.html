@@ -1,0 +1,406 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation">
+  <img src="../assets/images/logo.jpeg" height="50" alt="Logo de seguridad del cauca" />
+
+  <div class="navbar-header">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/inicio"> <fa-icon [icon]="faHome"> </fa-icon> Inicio</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/quienessomos">
+        <fa-icon [icon]="faHotel"> </fa-icon> ¿Quienes Somos?</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+          >
+          <fa-icon [icon]="faShoppingCart"> </fa-icon> Servicios</a>
+
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="/servicios/SVE" routerLinkActive="active">
+            <fa-icon [icon]="faMicrochip"></fa-icon> Seguridad Electronica 24/7</a>
+
+          <a class="dropdown-item" routerLink="/servicios/segPrivada" routerLinkActive="active"
+            >
+            <fa-icon [icon]="faUserSecret"></fa-icon> Seguridad privada
+            <!-- <fa-icon [icon]="faAngleDoubleRight"> </fa-icon> -->
+          </a>
+          <a class="dropdown-item" routerLink="/servicios/camaras" routerLinkActive="active">
+            <fa-icon [icon]="faVideo"></fa-icon> Camaras de Seguridad
+            <!-- <fa-icon [icon]="faAngleDoubleRight"> </fa-icon> -->
+          </a>
+          <a class="dropdown-item" routerLink="/servicios/estudioSeguridad" routerLinkActive="active">
+            <fa-icon [icon]="faUserEdit"></fa-icon> Estudio de Seguridad</a>
+          <a class="dropdown-item" routerLink="/servicios/Escolta" routerLinkActive="active">
+            <fa-icon [icon]="faUserShield"></fa-icon> Escolta a Personas y Mercancías</a>
+        </div>
+      </li>
+      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/contactanos">
+        <fa-icon [icon]="faPhoneVolume"> </fa-icon> Contactanos</a></li>
+      
+      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/cotizacion">
+        <fa-icon [icon]="faHandshake"> </fa-icon> Cotizaciones</a></li>
+      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/serviciocliente">
+        <fa-icon [icon]="faTools"> </fa-icon> Servicio Al Cliente</a></li>
+      <li class="nav-item" routerLinkActive="active"><a class="nav-link" routerLink="/login">
+        <fa-icon [icon]="faUserLock"> </fa-icon> Inicio Sesión</a></li>
+
+      <!--
+        <li class="nav-item" routerLinkActive="active">
+          <a (click)="logout()" class="nav-item nav-link"  >Logout</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/contacto">Contactanos</a>
+        </li>
+      -->
+    </ul>
+  </div>
+</nav>
+
+<br /><br />
+
+<div class="fondo-inicio">
+  <div [@routerTransition]>
+    <div class="row">
+      <div class="col-md-12">
+        <ngb-carousel>
+          <ng-template ngbSlide *ngFor="let slider of sliders">
+            <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%" height="auto" />
+            <!--
+              <div class="carousel-caption">
+                  <h3 style="color: black">{{ slider.label }}</h3>
+                  <p style="color: black">{{ slider.text }}</p>
+              </div>
+            -->
+          </ng-template>
+        </ngb-carousel>
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="servicio-inicio" style="background-color: #1a237e">
+  <br />
+  <h3 style="color: #ffd600">
+    <div style="text-align:center; font-size: 2em"><fa-icon [icon]="faShieldAlt"> </fa-icon></div>
+    Somos la primera empresa de Seguridad Privada fundada en el Departamento del Cauca, con más de 40 años trabajando por su tranquilidad.
+  </h3>
+  <br />
+</div>
+<hr />
+<div class="servicio-inicio " style="background-color: #9e9e9e">
+  <br />
+  <h1 style="color: black">Nuestro Portafolio de Servicios <fa-icon [icon]="faClipboardList"></fa-icon></h1>
+  <br />
+</div>
+<hr />
+<div class="container" style=" justify-content: inherit; align-items: inherit; height: inherit; flex-wrap: inherit;">
+  <div class="row text-center">
+    <div class="col-6 text-center"><img src="../../assets/images/1832.jpg" height="auto" width="100%" /></div>
+    <div class="col-6">
+      
+      <h2 class="text-center"> <fa-icon [icon]="faMicrochip"></fa-icon> SEGURIDAD ELECTRONICA 24/7</h2>
+      <br /><br />
+      <p class="text-justify">
+        Este es uno de los servicios más innovadores, solicitados por nuestros clientes. Ofrecemos CCTV-seguridad perimetral, seguridad
+        electronica de su hogar o negocio las 24 horas. Siempre pensando en su tranquilidad.
+      </p>
+      <button type="button" class="btn btn-primary">
+        <a class="nav-link text-center" style = "color: #ffd600" routerLink="/servicios/SVE">Mas info  <fa-icon [icon]="faAngleDoubleRight"> </fa-icon></a>
+      </button>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="row text-center">
+    <div class="col-6">
+      <h2 class="text-center"> <fa-icon [icon]="faUserSecret"></fa-icon>  SEGURIDAD PRIVADA</h2>
+      <br /><br />
+      <p class="text-justify">
+        Vigilancia Privada en sus diferentes modalidades, diurno y/o nocturnos, todos los días incluyendo sábados, domingos y festivos, o
+        según exigencias del cliente. Personal capacitado, armado y entrenado conforme a las normas de Seguridad. Personal disponible las 24
+        horas del día para atender diferentes eventualidades.
+      </p>
+      <button type="button" class="btn btn-primary">
+        <a class="nav-link text-center" style = "color: #ffd600" routerLink="/servicios/segPrivada">Mas info  <fa-icon [icon]="faAngleDoubleRight"> </fa-icon></a>
+      </button>
+      
+    </div>
+    <div class="col-6 text-center"><img src="../../assets/images/segprivada.jpg" height="auto" width="100%" /></div>
+  </div>
+  <hr />
+  <div class="row text-center">
+    <div class="col-6 text-center"><img src="../../assets/images/dahua.jpg" height="auto" width="100%" /></div>
+    <div class="col-6">
+      <h2 class="text-center"> <fa-icon [icon]="faVideo"></fa-icon>  CÁMARAS DE SEGURIDAD</h2>
+      <br /><br />
+      <p class="text-justify">
+        Circuito cerrado de televisión o CCTV es una tecnología de videovigilancia diseñada para supervisar una diversidad de ambientes y
+        actividades. Pregunta por nuestra promocion del mes.
+      </p>
+      <button type="button" class="btn btn-primary">
+        <a class="nav-link text-center" style = "color: #ffd600" routerLink="/servicios/camaras">Mas info  <fa-icon [icon]="faAngleDoubleRight"> </fa-icon></a>
+      </button>
+      
+    </div>
+  </div>
+  <hr />
+  <div class="row text-center">
+    <div class="col-6">
+      <h2 class="text-center"> <fa-icon [icon]="faUserEdit"></fa-icon>  ESTUDIO DE SEGURIDAD</h2>
+      <br /><br />
+      <p class="text-justify">
+        Personal calificado en las diferentes areas, diseñadores, ingenieros de proyectos, tecnicos instaladores calificados y certificados.
+        Diseño de seguridad personalizado que permiten identificar las necesidades reales de cada uno de nuestros clientes, afin de
+        satisfacer y brindar un servicios con eficiencia y calidad.
+      </p>
+      <button type="button" class="btn btn-primary">
+          <a class="nav-link text-center" style = "color: #ffd600" routerLink="/servicios/estudioSeguridad">Mas info  <fa-icon [icon]="faAngleDoubleRight"> </fa-icon></a>
+      </button>
+      
+    </div>
+    <div class="col-6 text-center"><img src="../../assets/images/estudio.jpg" height="auto" width="100%" /></div>
+  </div>
+  <hr />
+  <div class="row text-center">
+    <div class="col-6 text-center"><img src="../../assets/images/escolta.jpg" height="auto" width="100%" /></div>
+    <div class="col-6">
+      <h2><fa-icon [icon]="faUserShield"></fa-icon>  ESCOLTA A PERSONAS Y MERCANCÍA</h2>
+      <br />
+      <p>
+        Escolta a personas y a mercancías con personal experto y avalado por la superintendencia de Vigilancia.
+        
+      </p>
+      <button type="button" class="btn btn-primary">
+          <a class="nav-link" style = "color: #ffd600" routerLink="/servicios/Escolta">Mas info  <fa-icon [icon]="faAngleDoubleRight"> </fa-icon></a>
+      </button>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="servicio-inicio" style="background-color: #1a237e">
+  <br />
+  <h3 style="color: #ffd600; font-size: 3em">
+    <div style="text-align:center"><fa-icon [icon]="faAward"> </fa-icon></div>
+    Nuestro Reconocimiento.
+  </h3>
+  <br />
+</div>
+<!-- <div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:6em">&nbsp;&nbsp;&nbsp; La Cruz de Belalcázar</h1>
+    <h1 style="font-size:4em">&nbsp;&nbsp;&nbsp;  Seguridad del Cauca LTDA</h1>
+    <small style="font-size:1.5em">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " Trabajando por más de 40 años por su tranquilidad "</small>
+  </div>
+</div> -->
+<div class="servicio-inicio2">
+  <br />
+  <h1 class="text-center"style="color: #000000">
+    <!-- <div style="text-align:center; font-size: 2em"><fa-icon [icon]="faShieldAlt"> </fa-icon></div> -->
+    <span style="font-size: 2em">La Cruz de Belalcazár <br /> </span>
+    <span style="font-size: 1em">Seguridad del Cauca LTDA <br /></span>   
+    <span  style="font-size: 0.6em">Trabajando por más de 40 años por su tranquilidad</span>
+  </h1>
+  <br />
+</div>
+
+
+
+<hr />
+
+<div class="servicio-inicio " style="background-color: #9e9e9e">
+  <br />
+  <h1 style="color: black"><fa-icon [icon]="faRobot"></fa-icon> Innovación en Tecnología</h1>
+  <br />
+</div>
+<div class="hero-iot">
+    <div class="hero-iottext">
+        <div style="text-align:center; font-size: 3em"><fa-icon [icon]="faHouseDamage"> </fa-icon> &nbsp;&nbsp; <fa-icon [icon]="faWifi"></fa-icon></div>
+      <h1 style="font-size:50px">Domótica e IoT</h1>
+      <h3>¡ Estamos a la vanguardia en Tecnología !</h3>
+      <br />
+      <button type="button" class="boton-compra" routerLink="/domotica">MÁS INFORMACIÓN</button>
+    </div>
+</div>
+<hr />
+<div class = "container ">
+  <div class="row">
+    <div class="col-6 ">
+      <h2 class ="text-center">Domótica y Soluciones IoT</h2>
+      <br>
+      <p clas="text-justify">
+        Las soluciones tecnológicas que existe hasta la fecha, permite que su 
+        experiencia como usuario sea de excelente calidad y comodidad. Por eso
+        Seguridad del Cauca. Ltda brinda los serivicios de Domotica con la ayuda 
+        del internet de las cosas, haciendo su vida más segura.
+       <br />
+       <br />
+       <br />
+       
+       
+
+      </p>
+      <div class="text-center">
+        <img src="../assets/images/logo.jpeg" height="80%" alt="Logo de seguridad del cauca" />
+      </div> 
+    </div>
+    <div class="col-6">
+        <img src="../../assets/images/iot_soluciones.png" height="auto" width="100%" />
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container text-center">
+    <video src="../../assets/videos/video1.webm"  type="video/webm" width="100%" height="auto" controls autoplay>
+    </video>
+</div>
+
+<br />
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm text-center">
+        <img src="../assets/images/logo.jpeg" height="50" alt="Logo de seguridad del cauca" />
+        <p>Seguridad del cauca trabajando por más de 40 años en su tranquilidad.</p>
+        <small>¡Trabajemos Juntos!</small>
+      </div>
+      <div class="col-sm text-center">
+        <h4><fa-icon [icon]="faShoppingCart"></fa-icon> Nuestros Servicios</h4>
+        <ul class="list-unstyled" style="font-size: 0.8em">
+          <li>
+            <fa-icon [icon]="faMicrochip"></fa-icon> &nbsp;
+            <a routerLink="/servicios/SVE">Seguridad Electronica 24/7</a>
+          </li>
+          <li>
+            <fa-icon [icon]="faUserSecret"></fa-icon>&nbsp;
+            <a routerLink="/servicios/segPrivada">Seguridad Privada</a>
+          </li>
+          <li>
+            <fa-icon [icon]="faVideo"></fa-icon>&nbsp;
+            <a routerLink="/servicios/camaras">Camaras de Seguridad</a>
+          </li>
+          <li>
+            <fa-icon [icon]="faUserEdit"></fa-icon>&nbsp;
+            <a routerLink="/servicios/estudioSeguridad">Estudio de Seguridad</a>
+          </li>
+          <li>
+            <fa-icon [icon]="faUserShield"></fa-icon>&nbsp;
+            <a routerLink="/servicios/Escolta">Escolta a Personas y Mercancías</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm text-center">
+        <h4><fa-icon [icon]="faPhoneVolume"> </fa-icon> Como Contáctarnos</h4>
+        <ul class="list-unstyled" style="font-size: 0.8em">
+          <li>
+            <fa-icon [icon]="faUserFriends"> </fa-icon>&nbsp;
+            <a routerLink="/contactanos">Contáctanos</a></li>
+          <li>
+            <fa-icon [icon]="faTools"> </fa-icon>&nbsp;
+            <a routerLink="/serviciocliente">Servicio Al Cliente</a></li>
+          <li>
+            <fa-icon [icon]="faPhoneSquare"> </fa-icon>&nbsp;
+            
+            (032) 8242415</li>
+          <li>
+            (+57) 320 675 3562</li>
+          <li>
+              <fa-icon [icon]="faEnvelope"></fa-icon>&nbsp;
+              <a href="https://gmail.com">gerencia@seguridaddelcauca.com.co</a></li>
+          <li>
+            <fa-icon [icon]="faFacebook"> </fa-icon>&nbsp;
+            <a href="https://facebook.com/SeguridadDelCaucaLtda">Seguridad del Cauca LTDA</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container mt16 mb8" style="font-size: 0.8em">
+    <div class="pull-left text-muted">Copryright <fa-icon [icon]="faCopyright"> </fa-icon> SEGURIDAD DEL CAUCA LTDA</div>
+    <div class="pull-right text-muted">
+      Diseñado por Ing. <a class="text-muted" href="https://github.com/CristianPalta1">Cristian Daniel Palta C</a>
+    </div>
+  </div>
+</footer>
+
+<div class="btn-add" (click)="action = 'visible' && (chat = 'visible' && (empezar = 'visible'))" style="z-index: 1">
+  <div style="text-align:center"><fa-icon [icon]="faComments"> </fa-icon></div>
+</div>
+
+
+<div class="chatbox" *ngIf="action === 'visible'" style="z-index: 1">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" style="color:white">
+          <a>{{ title }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" style="color:white; cursor: pointer;" ><a>_</a></li>
+        &nbsp;&nbsp;&nbsp;
+        <li class="nav-item" style="color:white; cursor: pointer;" (click)="cerrar()"><a>X</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br />
+  <div class="cuerpo-chat">
+    <div *ngIf="empezar === 'visible'" style="z-index: 1">
+      <button class="btnchat"  (click)="guardarChat2()">
+        Empezar Chat
+      </button>
+    </div>
+  </div>
+  
+</div>
+
+<div class="chatbox" *ngIf="action === 'visible' &&  (empezar ==='oculto')" style="z-index: 1">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active" style="color:white">
+          <a>{{ title }}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" style="color:white; cursor: pointer;" (click)="action = 'oculto'"><a>_</a></li>
+        &nbsp;&nbsp;&nbsp;
+        <li class="nav-item" style="color:white; cursor: pointer;" (click)="action = 'oculto'"><a>X</a></li>
+      </ul>
+    </div>
+  </nav>
+  <br />
+  
+  <div class="row enviochat " *ngIf="empezar === 'oculto'">
+    <div class="col-8" style="padding-right: 1px;">
+      <input
+        type="text"
+        class="form-control"
+        id="mensajeCliente"
+        aria-describedby="chatClient"
+        placeholder="Escribe"
+        [(ngModel)]="conversa.comentario"
+        [ngModelOptions]="{ standalone: true }"
+        style="font-size: 1.3em; width: 110%"
+      />
+    </div>
+    <div class="col-4">
+      <button type="submit" (click)="goToChat()" class="btn btn-primary">Enviar</button>
+    </div>
+  </div>
+</div>
